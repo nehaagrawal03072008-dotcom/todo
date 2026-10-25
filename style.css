@@ -1,0 +1,175 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e6d9ff;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    background-color: white;
+    width: 100%;
+    max-width: 550px;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+}
+
+h1 {
+    text-align: center;
+    color: #5b21b6;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+#todoForm {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#taskInput {
+    flex: 1;
+    min-width: 0;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 14px;
+    font-size: 14px;
+}
+
+.add-btn {
+    background-color: #ec4899;
+    color: white;
+}
+
+.add-btn:hover {
+    background-color: #db2777;
+}
+
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    background-color: #eee;
+    color: #333;
+}
+
+.filter-btn.active {
+    background-color: #7c3aed;
+    color: white;
+}
+
+#taskCount {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+#taskList {
+    list-style: none;
+}
+
+.task {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.task-text {
+    flex: 1;
+    overflow-wrap: anywhere;
+}
+
+.task.completed .task-text {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.delete-btn {
+    background-color: #fce7f3;
+    color: #be185d;
+}
+
+.delete-btn:hover {
+    background-color: #fbcfe8;
+}
+
+#message {
+    margin-top: 15px;
+    color: #5b21b6;
+    font-size: 14px;
+}
+
+@media (max-width: 450px) {
+    .container {
+        padding: 20px;
+    }
+
+    #todoForm {
+        flex-direction: column;
+    }
+
+    .add-btn {
+        width: 100%;
+    }
+}
+
+/* Checkbox styling */
+.task input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    min-width: 18px;
+    background-color: white;
+    border: 2px solid #999;
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+}
+
+/* When the checkbox is checked */
+.task input[type="checkbox"]:checked {
+    background-color: white;
+    border-color: #7c3aed;
+}
+
+/* Purple tick mark on a white background */
+.task input[type="checkbox"]:checked::after {
+    content: "✓";
+    color: #7c3aed;
+    font-size: 14px;
+    font-weight: bold;
+    position: absolute;
+    left: 2px;
+    top: -2px;
+}

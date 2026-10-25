@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Todo List</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <img src=""
+        <h1>My Todo List</h1>
+        <p class="subtitle">Write your tasks and complete them on time!</p>
+
+        <form id="todoForm">
+            <input
+                type="text"
+                id="taskInput"
+                placeholder="Enter your task..."
+                autocomplete="off"
+                required
+            >
+            <button type="submit" class="add-btn">Add Task</button>
+        </form>
+
+        <div class="filters">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="pending">Pending</button>
+            <button class="filter-btn" data-filter="completed">Completed</button>
+        </div>
+
+        <p id="taskCount">Loading tasks...</p>
+
+        <ul id="taskList"></ul>
+
+        <p id="message"></p>
+    </div>
+
+    <script src="first.js"></script>
+</body>
+</html>
